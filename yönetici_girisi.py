@@ -1,0 +1,50 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_yonetici_giris(object):
+    def setupUi(self, yonetici_giris):
+        yonetici_giris.setObjectName("yonetici_giris")
+        yonetici_giris.resize(450, 342)
+        self.label = QtWidgets.QLabel(yonetici_giris)
+        self.label.setGeometry(QtCore.QRect(30, 50, 361, 41))
+        self.label.setObjectName("label")
+        self.layoutWidget = QtWidgets.QWidget(yonetici_giris)
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 110, 361, 181))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.layoutWidget)
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout.setObjectName("gridLayout")
+        self.kullanici_adi = QtWidgets.QLabel(self.layoutWidget)
+        self.kullanici_adi.setObjectName("kullanici_adi")
+        self.gridLayout.addWidget(self.kullanici_adi, 0, 0, 1, 1)
+        self.lineEdit = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit.setObjectName("lineEdit")
+        self.gridLayout.addWidget(self.lineEdit, 0, 1, 1, 1)
+        self.sifre = QtWidgets.QLabel(self.layoutWidget)
+        self.sifre.setObjectName("sifre")
+        self.gridLayout.addWidget(self.sifre, 1, 0, 1, 1)
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.layoutWidget)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.gridLayout.addWidget(self.lineEdit_2, 1, 1, 1, 1)
+        self.gridLayout.setColumnMinimumWidth(0, 4)
+        self.gridLayout.setColumnMinimumWidth(1, 10)
+        self.gridLayout.setRowMinimumHeight(0, 2)
+        self.gridLayout.setRowMinimumHeight(1, 3)
+        self.gridLayout.setColumnStretch(0, 4)
+        self.gridLayout.setColumnStretch(1, 10)
+        self.gridLayout.setRowStretch(0, 3)
+        self.gridLayout.setRowStretch(1, 5)
+        self.btn_giris = QtWidgets.QPushButton(yonetici_giris)
+        self.btn_giris.setGeometry(QtCore.QRect(180, 290, 141, 28))
+        self.btn_giris.setObjectName("btn_giris")
+
+        self.retranslateUi(yonetici_giris)
+        QtCore.QMetaObject.connectSlotsByName(yonetici_giris)
+
+    def retranslateUi(self, yonetici_giris):
+        _translate = QtCore.QCoreApplication.translate
+        yonetici_giris.setWindowTitle(_translate("yonetici_giris", "Yönetici Giriş Ekranı"))
+        self.label.setText(_translate("yonetici_giris", "<html><head/><body><p><span style=\" font-weight:600;\">Lütfen kullanıcı adı ve şifrenizi eksiksiz giriniz.</span></p></body></html>"))
+        self.kullanici_adi.setText(_translate("yonetici_giris", "Kullanıcı Adı:"))
+        self.sifre.setText(_translate("yonetici_giris", "Şifre:"))
+        self.btn_giris.setText(_translate("yonetici_giris", "Giriş Yap"))

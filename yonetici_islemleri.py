@@ -1,0 +1,52 @@
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_Yonetici_islemleri(object):
+    def setupUi(self, Yonetici_islemleri):
+        Yonetici_islemleri.setObjectName("Yonetici_islemleri")
+        Yonetici_islemleri.resize(473, 362)
+        self.layoutWidget = QtWidgets.QWidget(Yonetici_islemleri)
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 40, 401, 281))
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.layoutWidget.sizePolicy().hasHeightForWidth())
+        self.layoutWidget.setSizePolicy(sizePolicy)
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.musterileri_goruntule = QtWidgets.QPushButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.musterileri_goruntule.sizePolicy().hasHeightForWidth())
+        self.musterileri_goruntule.setSizePolicy(sizePolicy)
+        self.musterileri_goruntule.setObjectName("musterileri_goruntule")
+        self.verticalLayout.addWidget(self.musterileri_goruntule)
+        self.musteri_sil = QtWidgets.QPushButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.musteri_sil.sizePolicy().hasHeightForWidth())
+        self.musteri_sil.setSizePolicy(sizePolicy)
+        self.musteri_sil.setObjectName("musteri_sil")
+        self.verticalLayout.addWidget(self.musteri_sil)
+        self.cikis = QtWidgets.QPushButton(self.layoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.cikis.sizePolicy().hasHeightForWidth())
+        self.cikis.setSizePolicy(sizePolicy)
+        self.cikis.setObjectName("cikis")
+        self.verticalLayout.addWidget(self.cikis)
+
+        self.retranslateUi(Yonetici_islemleri)
+        QtCore.QMetaObject.connectSlotsByName(Yonetici_islemleri)
+
+    def retranslateUi(self, Yonetici_islemleri):
+        _translate = QtCore.QCoreApplication.translate
+        Yonetici_islemleri.setWindowTitle(_translate("Yonetici_islemleri", "Yönetici İşlemleri"))
+        self.musterileri_goruntule.setText(_translate("Yonetici_islemleri", "Müşterileri Görüntüle"))
+        self.musteri_sil.setText(_translate("Yonetici_islemleri", "Müşteri Sil"))
+        self.cikis.setText(_translate("Yonetici_islemleri", "Çıkış"))
